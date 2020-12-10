@@ -70,6 +70,21 @@ const AboutPage = () => {
 						https://github.com/gzubatov/Tweet-Sentiment-Server
 					</a>
 				</p>
+
+				<h3>Performance Issues</h3>
+				<p>
+					There may be a slight delay for fetching the tweets because
+					I am using a free tier of Heroku to host the server and if
+					the server has not received a search query in 30 minutes it
+					goes to sleep. Searching for tweets will wake the server up
+					though and subsequent searches should not have their
+					retrieval speed effected.
+				</p>
+				<p>
+					There is also a small delay in loading the actual tweets
+					because of the oEmbed API but all the tweets will eventually
+					appear.
+				</p>
 			</div>
 		</div>
 	);
