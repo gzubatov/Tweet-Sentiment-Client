@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tweet } from 'react-twitter-widgets';
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+//import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 import LikertScale from './LikertScale';
 
