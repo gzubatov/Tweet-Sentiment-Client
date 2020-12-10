@@ -1,5 +1,7 @@
 import React from 'react';
-import { Tweet } from 'react-twitter-widgets';
+// import { Tweet } from 'react-twitter-widgets';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
 import LikertScale from './LikertScale';
 
 const TweetItem = ({ tweetData }) => {
@@ -12,7 +14,7 @@ const TweetItem = ({ tweetData }) => {
 				: score.score < 0 ? 'red' : ''} message`}
 		>
 			<div className="column">
-				<Tweet tweetId={status.id_str} />
+				<TwitterTweetEmbed tweetId={status.id_str} />
 			</div>
 			<div className="column">
 				{score.score === 0 && (
