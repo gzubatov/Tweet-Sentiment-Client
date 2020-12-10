@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import AboutPage from './pages/AboutPage';
 import SearchPage from './pages/SearchPage';
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
 			<Router>
 				<div className="ui menu">
 					<div className="header item">
-						<a href="/">Tweet Sentiment Analyzer</a>
+						<Link to="/">Tweet Sentiment Analyzer</Link>
 					</div>
 					<Link className="item" to="/about">
 						About
@@ -16,7 +17,7 @@ const App = () => {
 				</div>
 				<Switch>
 					<Route path="/about">
-						<h1>About</h1>
+						<AboutPage />
 					</Route>
 					<Route path="/">
 						<SearchPage />

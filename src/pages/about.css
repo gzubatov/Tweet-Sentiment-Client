@@ -1,0 +1,15 @@
+.about-page p {
+    font-size: 1.1em;
+}
+
+.about-page .positive {
+    background-color: rgba(0, 255, 0, .3);
+}
+
+.about-page .negative {
+    background-color: rgba(255, 0, 0, .2);
+}
+
+.about-page .neutral {
+    background-color: rgba(0, 0, 255, .2);
+}
