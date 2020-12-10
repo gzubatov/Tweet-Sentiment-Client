@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import twitter from '../apis/twitter';
+import BarChart from '../components/BarChart';
 import SearchBar from '../components/SearchBar';
 import TweetList from '../components/TweetList';
 
@@ -93,7 +94,10 @@ const SearchPage = () => {
 				</div>
 			)}
 			{search !== '' && (
-				<TweetList tweets={tweets} fetching={setIsFetchingTweets} />
+				<div>
+					<BarChart tweets={tweets} />
+					<TweetList tweets={tweets} fetching={setIsFetchingTweets} />
+				</div>
 			)}
 		</div>
 	);

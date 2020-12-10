@@ -6,9 +6,9 @@ const App = () => {
 	return (
 		<div className="ui container">
 			<Router>
-				<div class="ui menu">
-					<div class="header item">
-						<Link to="/">Tweet Sentiment Analyzer</Link>
+				<div className="ui menu">
+					<div className="header item">
+						<a href="/">Tweet Sentiment Analyzer</a>
 					</div>
 					<Link className="item" to="/about">
 						About
