@@ -1,3 +1,4 @@
+// The main page of the web app
 import React, { useState, useEffect } from 'react';
 
 import twitter from '../apis/twitter';
@@ -13,14 +14,16 @@ const SearchPage = () => {
 	const [ tweets, setTweets ] = useState([]);
 	const [ isFetchingTweets, setIsFetchingTweets ] = useState(true);
 
+	// When component mounts, check if the user's browser has geolocation capablities
+	// If the user allows geolocation the tweets will be searched within the radius
+	// If the user does not allow or the browser isnt' capable of geolocation then
+	// it will disregard the search radius parameter.
 	useEffect(() => {
 		if ('geolocation' in navigator) {
 			console.log('Available');
 			navigator.geolocation.getCurrentPosition(
 				function(position) {
 					setGeolocationAllowed(true);
-					console.log('Latitude is :', position.coords.latitude);
-					console.log('Longitude is :', position.coords.longitude);
 					setPosition(
 						`${position.coords.latitude},${position.coords
 							.longitude}`
@@ -39,6 +42,9 @@ const SearchPage = () => {
 		}
 	}, []);
 
+	// isFetching controls whether the loading overlay is displayed
+	// Overlay should always be displayed when the user does a search
+	// This code also fetches the tweets for the search.
 	useEffect(
 		() => {
 			setIsFetchingTweets(true);
@@ -74,6 +80,7 @@ const SearchPage = () => {
 		[ search, geolocationAllowed, position, radius ]
 	);
 
+	// Search form handler
 	const onSearchSubmit = (term, newRadius) => {
 		setIsFetchingTweets(true);
 		setSearch(term);

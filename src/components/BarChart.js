@@ -1,3 +1,9 @@
+// Component to display a bar chart
+// It takes an array of tweets and loops through them counting
+// all of the positive, negative, and neutral tweets
+// Props:
+//	tweets - an array of tweets sent back from the node server
+
 import React from 'react';
 
 import { Bar } from 'react-chartjs-2';

@@ -1,6 +1,8 @@
+// Component to display a tweet and it's "sentiment score"
+// Props:
+//	tweetData - a singular object from the tweet array returned by the server
+
 import React, { useEffect, useState } from 'react';
-//import { Tweet } from 'react-twitter-widgets';
-//import { TwitterTweetEmbed } from 'react-twitter-embed';
 import twitter from '../apis/twitter';
 
 import LikertScale from './LikertScale';
@@ -9,9 +11,10 @@ const TweetItem = ({ tweetData }) => {
 	const { status, score } = tweetData;
 	const [ html, setHTML ] = useState('');
 
+	// When the component mounts, fetch the oEmbed HTML code
+	// from the node server
 	useEffect(
 		() => {
-			//console.log('here', status);
 			fetchTweet(status);
 			if (window.twttr) {
 				window.twttr.widgets.load();

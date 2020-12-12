@@ -1,3 +1,5 @@
+// Component to display the search bar
+
 import React, { useState } from 'react';
 import './search-bar.css';
 
@@ -5,19 +7,17 @@ const SearchBar = (props) => {
 	const [ term, setTerm ] = useState('');
 	const [ radius, setRadius ] = useState(10);
 
+	// search term onChange handler
 	const handleInputChange = (e) => {
-		//console.log(e.currentTarget.value);
 		setTerm(e.currentTarget.value);
-		//console.log(term);
 	};
 
+	// radius onChange handler
 	const handleRadiusChange = (e) => {
-		//console.log(e.currentTarget.value);
 		setRadius(e.currentTarget.value);
-		//props.radiusChange(radius);
-		//console.log(term);
 	};
 
+	// handles form submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		props.onSubmit(term, radius);

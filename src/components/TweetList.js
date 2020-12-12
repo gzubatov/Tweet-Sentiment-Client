@@ -1,3 +1,9 @@
+// Component to display a list of "Tweet Items"
+// It takes an array of tweets and loops through them
+// mapping them to TweetItem components
+// Props:
+//	tweets - an array of tweets sent back from the node server
+
 import React, { useState, useEffect } from 'react';
 
 import TweetItem from './TweetItem';

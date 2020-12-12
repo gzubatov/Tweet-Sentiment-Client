@@ -1,3 +1,5 @@
+// Setup for get requests to Node server
+
 import axios from 'axios';
 
 export default axios.create({

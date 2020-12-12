@@ -1,3 +1,7 @@
+// Component to display a horizontal bar chart to resemble a Likert Scale
+// Props:
+//	number - a sentiment score, the number on the likert scale
+
 import React from 'react';
 
 import { HorizontalBar } from 'react-chartjs-2';
