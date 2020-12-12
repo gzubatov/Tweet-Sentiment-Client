@@ -8,7 +8,7 @@ import TweetList from '../components/TweetList';
 
 const SearchPage = () => {
 	const [ search, setSearch ] = useState('');
-	const [ radius, setRadius ] = useState(10);
+	const [ radius, setRadius ] = useState(25);
 	const [ geolocationAllowed, setGeolocationAllowed ] = useState(false);
 	const [ position, setPosition ] = useState('');
 	const [ tweets, setTweets ] = useState([]);
