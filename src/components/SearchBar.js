@@ -5,7 +5,7 @@ import './search-bar.css';
 
 const SearchBar = (props) => {
 	const [ term, setTerm ] = useState('');
-	const [ radius, setRadius ] = useState(10);
+	const [ radius, setRadius ] = useState(25);
 
 	// search term onChange handler
 	const handleInputChange = (e) => {
